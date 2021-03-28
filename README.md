@@ -1,4 +1,3 @@
 # npm install
 
-# initialize:
-# gulp watch
+# initialize: gulp watch

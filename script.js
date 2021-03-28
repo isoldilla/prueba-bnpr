@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-  import Swal from 'sweetalert2';
-  window.Swal = Swal;
+  
+  const Swal = require('sweetalert2')
 
   const grid = document.querySelector('.grid');
   const stopwatch = document.getElementById('#stopwatch');

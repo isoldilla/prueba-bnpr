@@ -1,7 +1,5 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-  
-  const Swal = require('sweetalert2')
 
   const grid = document.querySelector('.grid');
   const stopwatch = document.getElementById('#stopwatch');
@@ -19,9 +17,22 @@ document.addEventListener('DOMContentLoaded', () => {
   let timer = document.getElementById('seconds');
   let btnReset = document.getElementById('reset');
   let btnPause = document.getElementById('pause');
+  const helpBtn = document.getElementById('help');
   const reload = document.getElementById('reload');
   let face = document.querySelector('.face img');
 
+  setTimeout(() => {
+    Swal.fire({
+      html: "<p>Bienvenido al Buscacuñados. En el siguiente tablero hay 20 cuñados bien enterrados. Encuéntralos señalándolos con la insignia patria</p><p>Si no sabes cómo se juega, lo gugleas, que los chavales queréis todo hecho para ayer y yo a tu edad no tenía tantas facilidades.</p>",
+      confirmButtonText: "Al ruedo",
+      stopKeydownPropagation: true,
+      buttonsStyling: false,
+      customClass: {
+        popup: 'alert-container bienvenida',
+        confirmButton: 'alert-button'
+      }
+    });
+  }, 500);
   
   reload.addEventListener('click', _ => {
       location.reload();
@@ -53,7 +64,18 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log(counter)
 
 
-
+  helpBtn.addEventListener('click', function() {
+    Swal.fire({
+      title: "Instrucciones",
+      html: "<p>Clavar la Rojigualda: <span>click</span></p><p>Desclavar la Rojigualda: <span>alt/ctrl + click</span> o <span>click derecho</span></p><p>(Mi nieto de 4 años no necesita estas instrucciones, también te digo eh, ¡JAJAJA!)</p>",
+      confirmButtonText: "Gracias, caballero",
+      buttonsStyling: false,
+      customClass: {
+        popup: 'alert-container instrucciones',
+        confirmButton: 'alert-button'
+      }
+    })
+  });
   //Background
   document.addEventListener('mousemove', function(e) {
     let mouseX = e.pageX;

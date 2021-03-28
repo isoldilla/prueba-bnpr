@@ -319,7 +319,7 @@ button.alert-button {
     font-size: 1rem; }
     .footer h3:before {
       content: "";
-      background: url(/img/c.svg);
+      background-image: url("../img/c.svg");
       position: absolute;
       width: 15px;
       left: -20px;

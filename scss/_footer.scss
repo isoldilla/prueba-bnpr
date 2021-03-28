@@ -13,15 +13,6 @@
     font-weight: $font-weight-light;
     position: relative;
     font-size: 1rem;
-    &:before {
-      content: "";
-      background-image: url("../img/c.svg");
-      position: absolute;
-      width: 15px;
-      left: -20px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
   }
   @media screen and (max-width: 600px) {
     flex-wrap: wrap;

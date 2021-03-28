@@ -317,14 +317,6 @@ button.alert-button {
     font-weight: 300;
     position: relative;
     font-size: 1rem; }
-    .footer h3:before {
-      content: "";
-      background-image: url("../img/c.svg");
-      position: absolute;
-      width: 15px;
-      left: -20px;
-      top: 50%;
-      transform: translateY(-50%); }
   @media screen and (max-width: 600px) {
     .footer {
       flex-wrap: wrap; }

@@ -1,6 +1,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-  
+  import Swal from 'sweetalert2';
+  window.Swal = Swal;
+
   const grid = document.querySelector('.grid');
   const stopwatch = document.getElementById('#stopwatch');
   const contadorBanderas = document.getElementById("banderas");

@@ -9,10 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let casillas = [];
   let bombas = 20;
   let banderas = 0;
-
   let isGameOver = false;
-  //create board
-
   let seconds = 0;
   let timer = document.getElementById('seconds');
   let btnReset = document.getElementById('reset');
@@ -23,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setTimeout(() => {
     Swal.fire({
-      html: "<p>Bienvenido al Buscacuñados. En el siguiente tablero hay 20 cuñados bien enterrados. Encuéntralos señalándolos con la insignia patria</p><p>Si no sabes cómo se juega, lo gugleas, que los chavales queréis todo hecho para ayer y yo a tu edad no tenía tantas facilidades.</p>",
+      html: "<p>Bienvenido al Buscacuñados. En el siguiente tablero hay 20 cuñados bien enterrados. Encuéntralos señalándolos con la insignia patria.</p><p>Si no sabes cómo se juega, lo gugleas, que los chavales queréis todo hecho para ayer y yo a tu edad no tenía tantas facilidades.</p>",
       confirmButtonText: "Al ruedo",
       stopKeydownPropagation: true,
       buttonsStyling: false,
@@ -76,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   });
+  
   //Background
   document.addEventListener('mousemove', function(e) {
     let mouseX = e.pageX;
@@ -94,18 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
       element.style.transform = "rotate(" + angle + "deg)";
     });
   });
-
-  //Every 3 secs change fachaleco
-  // setInterval(function() {
-  //   count = count + 1;
-  //   count = count % backgrounds.length;
-
-  //   let image = backgrounds[count];
-
-  //   bgElements.forEach(element => {
-  //     element.src = image;
-  //   })
-  // }, 3000)
 
   function incrementSeconds() {
       seconds += 1;
@@ -129,10 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
       btnPause.innerHTML = 'pausar';
     }
   }
-  
-
-
-  // var interval = setInterval(callback, 1000);
 
   function crearTablero() {
     const bombasArray = Array(bombas).fill('bomba');
@@ -141,7 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const randomJuego = juegoArray.sort(() => Math.random() -0.5);
     console.log(randomJuego);
     
-    // get shuffled game array with random bombs
     for(let i = 0; i < area; i++) {
       //Crear un div por casilla
       const casilla = document.createElement('div');
@@ -225,9 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   crearTablero();
-
   
-
   function clavarBandera(casilla) {
     if (isGameOver) return;
     if (!casilla.classList.contains('checked') && (banderas < bombas)) {
@@ -252,7 +231,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function click(casilla) {
     let casillaID = casilla.id;
-    // console.log(casillaID);
     //Si es Game over, no pasa nada
     if (isGameOver) return;
     // Si la casilla ya ha sido checkeada o tiene una bandera, no pasa nada
@@ -278,14 +256,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
   }
 
-//  function start() {
-//   if(!empieza) {
-//     offset = Date.now();
-//     empieza = setInterval(update, 1);
-//   }
-//  }
-
-  //Check neighboring squares once square is clicked
   function comprobarCasilla(casilla, casillaID) {
     const bordeIzquierdo = (casillaID % width === 0);
     const bordeDerecho = (casillaID % width === width -1);
@@ -343,10 +313,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 10);
   }
 
-  // function displayBandera(num) {
-  //   var contador = document.getElementById("banderas").innerHTML = cifra + num;
-  //   cifra = contador;
-  // }
   function contarBanderas() {
     if (banderas < 10) {
       contadorBanderas.innerHTML = "0" + banderas;

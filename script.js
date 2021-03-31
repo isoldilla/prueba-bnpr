@@ -169,11 +169,11 @@ document.addEventListener('DOMContentLoaded', () => {
           total++
         }
         //NOROESTE
-        if (i > 9 && !bordeIzquierdo && casillas[i - 1 - width].classList.contains('bomba')) {
+        if (i > 11 && !bordeIzquierdo && casillas[i - 1 - width].classList.contains('bomba')) {
           total ++
         }
         //NORTE
-        if (i > 9 && casillas[i - width].classList.contains('bomba')) {
+        if (i > 10 && casillas[i - width].classList.contains('bomba')) {
           total++
         }
         //si el índice es mayor que 9 (para que tenga una fila por encima)
@@ -184,15 +184,15 @@ document.addEventListener('DOMContentLoaded', () => {
           total++
         }
         //ESTE
-        if (i < 99 && !bordeDerecho && casillas[i + 1].classList.contains('bomba')) {
+        if (i < 98 && !bordeDerecho && casillas[i + 1].classList.contains('bomba')) {
           total ++
         }
         //SURESTE
-        if (i < 89 && !bordeDerecho && casillas[i + 1 + width].classList.contains('bomba')) {
+        if (i < 88 && !bordeDerecho && casillas[i + 1 + width].classList.contains('bomba')) {
           total ++
         }
         //SUR
-        if (i < 90 && casillas[i + width].classList.contains('bomba')) {
+        if (i < 89 && casillas[i + width].classList.contains('bomba')) {
           total ++
         }
         //SUROESTE
@@ -268,13 +268,13 @@ document.addEventListener('DOMContentLoaded', () => {
         click(nuevaCasilla);
       }
       //NOROESTE: -1-width
-      if (casillaID > 10 && !bordeIzquierdo) {
+      if (casillaID > 11 && !bordeIzquierdo) {
         const nuevoID = casillas[parseInt(casillaID) -1 -width].id;
         const nuevaCasilla = document.getElementById(nuevoID);
         click(nuevaCasilla);
       }
       //NORTE: -width
-      if (casillaID > 9) {
+      if (casillaID > 10) {
         const nuevoID = casillas[parseInt(casillaID) -width].id;
         const nuevaCasilla = document.getElementById(nuevoID);
         click(nuevaCasilla);
@@ -293,13 +293,13 @@ document.addEventListener('DOMContentLoaded', () => {
         click(nuevaCasilla);
       }
       //SURESTE: +1+width
-      if (casillaID < 89 && !bordeDerecho) {
+      if (casillaID < 88 && !bordeDerecho) {
         const nuevoID = casillas[parseInt(casillaID) +1 +width].id;
         const nuevaCasilla = document.getElementById(nuevoID);
         click(nuevaCasilla);
       }
       //SUR: +width
-      if (casillaID < 90) {
+      if (casillaID < 89) {
         const nuevoID = casillas[parseInt(casillaID) +width].id;
         const nuevaCasilla = document.getElementById(nuevoID);
         click(nuevaCasilla);

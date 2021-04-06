@@ -17,19 +17,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const helpBtn = document.getElementById('help');
   const reload = document.getElementById('reload');
   let face = document.querySelector('.face img');
+  var alertBertin = sessionStorage.getItem('alert');
 
-  setTimeout(() => {
-    Swal.fire({
-      html: "<p>Bienvenido al Buscacuñados. En el siguiente tablero hay 20 cuñados bien enterrados. Encuéntralos señalándolos con la insignia patria.</p><p>Si no sabes cómo se juega, lo gugleas, que los chavales queréis todo hecho para ayer y yo a tu edad no tenía tantas facilidades.</p>",
-      confirmButtonText: "Al ruedo",
-      stopKeydownPropagation: true,
-      buttonsStyling: false,
-      customClass: {
-        popup: 'alert-container bienvenida',
-        confirmButton: 'alert-button'
-      }
-    });
-  }, 500);
+  if(alertBertin != 1){
+    setTimeout(() => {
+      Swal.fire({
+        html: "<p>Bienvenido al Buscacuñados. En el siguiente tablero hay 20 cuñados bien enterrados. Encuéntralos señalándolos con la insignia patria.</p><p>Si no sabes cómo se juega, lo gugleas, que los chavales queréis todo hecho para ayer y yo a tu edad no tenía tantas facilidades.</p>",
+        confirmButtonText: "Al ruedo",
+        stopKeydownPropagation: true,
+        buttonsStyling: false,
+        customClass: {
+          popup: 'alert-container bienvenida',
+          confirmButton: 'alert-button'
+        }
+      });
+    }, 500);
+  }
+
+  sessionStorage.setItem("alert", "1");
   
   reload.addEventListener('click', _ => {
       location.reload();
@@ -57,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
   btnPause.addEventListener('click', function() {
     pause();
   });
-  var counter = setInterval(incrementSeconds, 1000);
+  let counter = setInterval(incrementSeconds, 1000);
   console.log(counter)
 
 
@@ -108,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnPause.classList.contains('paused')){
       clearInterval(counter);
       btnPause.innerHTML = 'reanudar';
+      grid.style.pointerEvents = 'none';
     }
     else{
       if (counter) clearInterval(counter);

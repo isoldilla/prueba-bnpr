@@ -3,5 +3,22 @@
 body {
   font-family: $font-family-base;
   background: $lightgray;
-  overflow: hidden;
+  overflow-x: hidden;
+  margin: unset;
+  main {
+    margin: 0 auto;
+    max-width: 90vw;
+    overflow-x: hidden;
+    @media screen and (min-width: $breakpoint-md) {
+      max-width: 750px;
+    }
+
+    @media screen and (min-width: $breakpoint-lg) {
+      max-width: 1200px;
+    }
+
+    @media screen and (min-width: $breakpoint-xl) {
+      max-width: 1400px;
+    }
+  }
 }

@@ -1,3 +1,2 @@
-# npm install
-
-# initialize: gulp watch
+# Para inicializar SASS y compilar estilos:
+# Ejecutar: npm run sass

@@ -1,15 +1,11 @@
-$font-family-light: 'NB Mono Light';
-$font-family-base: 'NB Mono Regular';
-$font-family-medium: 'NB Mono Medium';
-$font-family-bold: 'NB Mono Bold';
-$font-family-arch: 'NB Mono Architekt';
+$font-family-base: 'NB Akademie Std';
 
 $font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-medium: 500;
-$font-weight-bold: 700;
 
 $black: #000;
+$turquoise: #007681;
 $red: #F90D0D;
 $blue: #007AFF;
 $yellow: #F4E52A;
@@ -20,3 +16,9 @@ $lightgray: #EDEDED;
 $white: #FFF;
 
 $border-base: .03rem solid $black;
+
+$breakpoint-xs: 360px;
+$breakpoint-sm: 600px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1366px;
+$breakpoint-xl: 1920px;

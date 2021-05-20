@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 60px;
-   
+    margin-top: 2rem;
     .post {
       a {
         color: $black;
@@ -16,7 +16,7 @@
         .thumbnail {
           position: relative;
           width: 100%;
-          padding-top: 100%;
+          padding-top: 70%;
             img {
               width: 100%;
               height: 100%;
@@ -47,13 +47,14 @@
   
   @media screen and (min-width: $breakpoint-md) {
     .posts-grid {
+      margin-top: 4rem;
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
   @media screen and (min-width: $breakpoint-lg) {
     .posts-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      grid-gap: 100px;
+      // grid-gap: 0px;
     } 
   }
 }

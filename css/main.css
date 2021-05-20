@@ -44,6 +44,8 @@ body.home {
   font-size: 1rem;
   transition: all 0.75s ease;
   border: 2px solid #000;
+  text-align: center;
+  line-height: 1.5;
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
 }
@@ -63,16 +65,23 @@ body.home {
   color: #FFF;
   background: #000;
 }
+.button.tertiary {
+  background: transparent;
+  color: #FFF;
+  border: 2px solid #FFF;
+}
+.button.tertiary:hover {
+  color: #000;
+  background: #FFF;
+}
 .button:focus {
   outline: none;
 }
 
-.cta {
-  border-top: 2px solid #000;
-}
 .cta.story {
   margin: 0 2rem;
-  padding: 3rem;
+  padding: 3rem 0;
+  border-top: 2px solid #000;
 }
 .cta.story .info {
   text-align: center;
@@ -100,11 +109,60 @@ body.home {
   opacity: 1;
   bottom: -5px;
 }
+.cta.premium {
+  padding: 2rem 0;
+  background: #242424;
+  color: #FFF;
+  -webkit-font-smoothing: antialiased;
+}
+.cta.premium .info {
+  margin: 0 2rem;
+}
+.cta.premium .info .title h3 {
+  text-transform: uppercase;
+  margin: 0;
+}
+.cta.premium .info p {
+  margin: 2rem 0;
+}
+.cta.premium .info a {
+  display: block;
+}
 @media screen and (min-width: 768px) {
   .cta.story {
     width: 70%;
-    margin: 0 auto;
     padding: 5rem 0;
+    margin: 0 auto;
+  }
+  .cta.premium {
+    padding: 3rem 0;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .cta.premium .title h3 {
+    font-size: 2.5rem;
+  }
+  .cta.premium .title h5 {
+    font-size: 2rem;
+  }
+  .cta.premium .info {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .cta.premium .info p {
+    flex: 1;
+    font-size: 20px;
+    margin: 2rem 4rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .cta.premium .info {
+    max-width: 1400px;
+  }
+  .cta.premium .info p {
+    font-size: 26px;
   }
 }
 
@@ -430,7 +488,6 @@ section.app {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   grid-gap: 60px;
-  padding: 2rem 0;
 }
 section.app .info > img {
   width: 75px;
@@ -449,7 +506,6 @@ section.app .images img {
 @media screen and (min-width: 768px) {
   section.app {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    padding: 3rem 0;
   }
   section.app .images.training {
     text-align: right;
@@ -459,9 +515,6 @@ section.app .images img {
   }
 }
 @media screen and (min-width: 1366px) {
-  section.app {
-    padding: 6rem 0;
-  }
   section.app .info .apps {
     justify-content: flex-start;
   }
@@ -680,6 +733,7 @@ p {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 60px;
+  margin-top: 2rem;
 }
 .posts .posts-grid .post a {
   color: #000;
@@ -690,7 +744,7 @@ p {
 .posts .posts-grid .post a .thumbnail {
   position: relative;
   width: 100%;
-  padding-top: 100%;
+  padding-top: 70%;
 }
 .posts .posts-grid .post a .thumbnail img {
   width: 100%;
@@ -714,13 +768,13 @@ p {
 }
 @media screen and (min-width: 768px) {
   .posts .posts-grid {
+    margin-top: 4rem;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media screen and (min-width: 1366px) {
   .posts .posts-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-gap: 100px;
   }
 }
 

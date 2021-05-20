@@ -1,8 +1,8 @@
 .cta {
-  border-top: 2px solid $black;
   &.story {
     margin: 0 2rem;
-    padding: 3rem;
+    padding: 3rem 0;
+    border-top: 2px solid $black;
     .info {
       text-align: center;
       a {
@@ -34,14 +34,74 @@
     }
   }
 
+  &.premium {
+    padding: 2rem 0;
+    background: $darkgray;
+    color: $white;
+    -webkit-font-smoothing: antialiased;
+    .info {
+      margin: 0 2rem;
+      .title {
+        h3 {
+          text-transform: uppercase;
+          margin: 0;
+        }
+      }
+      p {
+        margin: 2rem 0;
+      }
+      a {
+        display: block
+
+      }
+    }
+  }
+
   @media screen and (min-width: $breakpoint-md) {
-       &.story {
+      &.story {
         width: 70%;
+        padding: 5rem 0;
         margin: 0 auto;
-        padding: 5rem 0
+     }
+      &.premium {
+        padding: 3rem 0;
+      }
+      
+  }
 
-       }
-
+  @media screen and (min-width: $breakpoint-lg) {
+    &.premium {
+      .title {
+        h3 {
+          font-size: 2.5rem
+        }
+        h5 {
+          font-size: 2rem
+        }
+      }
+      .info {
+          display: flex;
+          align-items: center;
+          max-width: 1200px;
+          margin: 0 auto;
+          p {
+            flex: 1;
+            font-size: 20px;
+            margin: 2rem 4rem;
+          }
+      }
+    }
+  }
+  @media screen and (min-width: $breakpoint-xl) {
+    &.premium {
+      
+      .info {
+          max-width: 1400px;
+          p {
+            font-size: 26px;
+          }
+      }
+    }
   }
   
 }

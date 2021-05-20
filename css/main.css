@@ -35,11 +35,6 @@ body.home {
   background: linear-gradient(204deg, #878787 27%, rgba(255, 255, 255, 0.8897934174) 43%, rgba(255, 255, 255, 0.7469362745) 75%, #878787 87%);
 }
 
-body.blog .page-title {
-  margin: 6rem 1rem 2rem;
-  font-size: 1.5rem;
-  text-align: center;
-}
 body.blog .tags ul {
   padding: 0;
   list-style: none;
@@ -59,7 +54,7 @@ body.blog .tags ul li {
   transition: all 0.5s ease;
 }
 body.blog .tags ul li a {
-  color: #FFF;
+  color: #000;
   font-weight: 300;
 }
 body.blog .tags ul li:hover {
@@ -77,10 +72,6 @@ body.blog .posts a.button {
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
-  body.blog .page-title {
-    margin: 6rem 2rem 4rem;
-    font-size: 2.5rem;
-  }
   body.blog .posts .posts-grid {
     padding-bottom: 5rem;
   }
@@ -952,6 +943,12 @@ a {
   text-decoration: none;
 }
 
+h1.page-title {
+  margin: 6rem 1rem 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 h2,
 h3 {
   margin: 1rem 0;
@@ -961,7 +958,6 @@ h2 {
   font-size: 2rem;
   font-weight: 500;
 }
-
 h3 {
   font-size: 1.75rem;
 }
@@ -978,6 +974,17 @@ p {
   line-height: 1.5;
 }
 
+@media screen and (min-width: 768px) {
+  h1.page-title {
+    margin: 6rem 2rem 4rem;
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1366px) {
+  h1.page-title {
+    margin: 8rem 4rem 6rem;
+  }
+}
 .posts > h2 {
   text-align: center;
 }
@@ -1063,6 +1070,61 @@ p {
   }
 }
 
+.hero {
+  position: relative;
+}
+.hero img {
+  width: 100%;
+}
+
+.post-info {
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+}
+.post-info .author {
+  margin: 0;
+}
+.post-info .share {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+.post-info .share li {
+  margin-left: 1rem;
+}
+.post-info .share li .fa:before {
+  color: #000;
+  transition: all 0.5s ease;
+}
+.post-info .share li .fa:hover:before {
+  color: #00c1c1;
+}
+
+.tags-badges {
+  padding: 0;
+}
+.tags-badges ul {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.tags-badges ul li {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  background: #00c1c1;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  color: #000;
+}
+
+@media screen and (min-width: 1366px) {
+  .post-info,
+.tags-badges {
+    margin-top: 3rem;
+  }
+}
 .social {
   text-align: center;
   padding: 4rem 2;

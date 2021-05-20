@@ -14,12 +14,12 @@
       <nav class="header-desktop">
         <ul class="menu">
           <li><a href="blog.html">Blog</a></li>
-          <li>Empleo</li>
-          <li>Ayuda</li>
-          <li>Empresas colaboradoras</li>
+          <li><a href="#">Empleo</a></li>
+          <li><a href="#">Ayuda</a></li>
+          <li><a href="#">Empresas colaboradoras</a></li>
         </ul>
       </nav>
-      <a class="login" href="#">Iniciar sesión</a>
+      <a class="login button primary" href="#">Iniciar sesión</a>
       <input id="burger" type="checkbox">
       <label for="burger">
           <span></span>
@@ -36,40 +36,37 @@
       </nav>
     </header>
     <div id="swiper-run" class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events swiper-container-android">
-      <div class="swiper-wrapper" id="swiper-wrapper-21de6cf9ef69cc1b" aria-live="polite" style="transform: translate3d(-4200px, 0px, 0px); transition-duration: 0ms;">
-        <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="1" role="group" aria-label="3 / 5" style="width: 1400px;">
+      <div class="swiper-wrapper" aria-live="polite" style="transform: translate3d(-4200px, 0px, 0px); transition-duration: 0ms;">
+        <div class="swiper-slide swiper-slide-prev" style="width: 1400px;">
           <img src="./img/hero-slide-2.jpeg" alt="Hero Slide 2">
           <div class="text">
             <h3>Título slide.</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quis consectetur fuga quos quas doloribus nesciunt possimus, earum alias, saepe, numquam atque sapiente harum ea corporis ullam nam expedita. Aspernatur?</p> 
           </div>   
         </div>
-        <div class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="0" role="group" aria-label="2 / 5" style="width: 1400px;">
+        <div class="swiper-slide swiper-slide-duplicate-next" style="width: 1400px;">
           <img src="./img/hero-slide-3.jpeg" alt="Hero Slide 3">
           <div class="text">
             <h3>Sé el cambio.</h3>
             <p>Empieza un plan de entrenamiento, participa en retos y ve ganando fuerza. Corre, sal a pedalear, camina, entrena, baila... ¡toda actividad cuenta! No importa lo lejos que estés de alcanzar tus objetivos: descubre lo mejor de ti con las apps adidas Runtastic.</p> 
           </div>       
         </div>
-        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="2" role="group" aria-label="4 / 5" style="width: 1400px;">
+        <div class="swiper-slide swiper-slide-active"style="width: 1400px;">
           <img src="./img/hero-slide-1.jpeg" alt="Hero Slide 1">
           <div class="text">
             <h3>Título slide.</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam delectus consectetur quos molestiae. Nemo iure ratione vel, eius facilis suscipit eveniet corporis? Eos quasi ullam, ex modi repellat saepe sequi?</p> 
           </div>   
-        </div>
-
-       
-    </div>
-      <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-21de6cf9ef69cc1b"></div>
-      <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-21de6cf9ef69cc1b"></div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 3"></span></div>
-
-      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>       
       </div>
+      <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+        <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span>
+        <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span>
+        <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 3"></span>
+      </div>
+      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+    </div>
     <main>
-      
       <section class="app">
         <div class="info">
           <img src="./img/training-app-icon.png" alt="Adidas Training">
@@ -101,7 +98,98 @@
           </div>
         </div>
       </section>
+      <div id="swiper-testimonials" class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events swiper-container-android">
+        <div class="swiper-wrapper" aria-live="polite" style="transform: translate3d(-4200px, 0px, 0px); transition-duration: 0ms;">
+          <div class="swiper-slide swiper-slide-prev" style="width: 1400px;">
+            <div class="testimonial">
+              <h3>“Ahora me siento a gusto conmigo mismo”</h3>
+              <div class="faces">
+                <img src="./img/case-1-before.png" alt="Case 1 Before">
+                <img src="./img/case-1-after.png" alt="Case 1 After">
+              </div>
+          
+              <p>Ya de pequeño era más bien regordete y con los años no paré de ganar peso: <strong>en 2015 alcancé los 180 kg</strong>. En ese momento, mi hijo tenía cuatro años. Él fue una de las razones por las que decidí actuar: no quería que se avergonzara de mi. Además, quería ser un buen ejemplo para él. </p> 
+            
+              <a class="button secondary" href="https://www.runtastic.com/blog/es/correr-para-perder-peso/">Leer la historia completa</a> 
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-duplicate-next" style="width: 1400px;">
+            <div class="testimonial">
+              <h3>“Sé el tipo de persona que te gustaría conocer”</h3>
+              <div class="faces">
+                <img src="./img/case-2-before.png" alt="Case 2 Before">
+                <img src="./img/case-2-after.png" alt="Case 2 After">
+              </div>
+              
+              <p>El 4 de noviembre de 2011, decidí cambiar mis hábitos alimenticios. Empecé por reducir la ingesta de carbohidratos y a añadir más verdura a mis platos. También adopté la costumbre de seguir un plan de comidas, para visualizar mejor las porciones que consumía. <strong>Al cabo de seis meses ya había perdido 38 kilos</strong>.</p> 
+              
+              <a class="button secondary" href="https://www.runtastic.com/blog/es/de-108-kg-a-60-kg-el-cambio-de-audrey/">Leer la historia completa</a>   
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-active" style="width: 1400px;">
+            <div class="testimonial">
+              <h3>“De pesar 112 kg a correr una maratón”</h3>
+              <div class="faces">
+                <img src="./img/case-3-before.png" alt="Case 3 Before">
+                <img src="./img/case-3-after.png" alt="Case 3 After">
+              </div>              
+              
+              <p> Me llamo Benni y mi aventura para perder peso empezó hacer 4 años. Por aquel entonces, me sentía realmente incómodo en mi propia piel:  llegué a pesar 112 kg. <strong>Mi médico me motivó a hacer algo</strong>  para solucionar mi problema de peso. Así que le declaré la guerra a mis kilos de más y empecé a correr.</p> 
+              <a class="button secondary" href="https://www.runtastic.com/blog/es/el-secreto-para-peder-peso-es-correr-y-correr/">Leer la historia completa</a> 
+            </div>
+          </div>       
+        </div>
+       
+        <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-21de6cf9ef69cc1b">  
+        </div>
+        <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-21de6cf9ef69cc1b">
+        </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+      </div>
+      <div class="cta story">
+        <div class="info">
+          <h4>Sé nuestra próxima historia de superación</h4>
+          <p>¿Has hecho un cambio radical en tu vida? ¿Has perdido peso con éxito? ¿Has decidido llevar una vida más saludable y ponerte en forma? Cuéntanoslo todo para ser nuestra siguiente historia de superación.</p>
+          <a href="https://www.runtastic.com/blog/es/comparte-tus-logros/?utm_content=success-story-form&utm_source=runtastic&utm_medium=blog&utm_campaign=runtastic_landingpage">Enviar historia de superación</a>
+        </div>
+      </div>
+      <section class="posts">
+        <h2>Artículos de interés</h2>
+        <div class="posts-grid">
+          <div class="post">
+            <a href="https://www.runtastic.com/blog/es/movimiento-run-for-the-oceans/">
+              <div class="thumbnail">
+                <img src="./img/post-1.jpeg" alt="Post 1 image">
+              </div>
+              <h2 class="post-title">Run for the Oceans: la lucha contra los residuos plásticos</h2>
+              <h5 class="author">adidas Runtastic Team | 19/5/2021</h5>
+              <p>El plástico es un problema global. Únete a Run For The Oceans entre el 28 de mayo y el 8 de junio para denunciar la contaminación por plástico en el mar.</p>
+            </a>
+          </div>
+          <div class="post">
+            <a href="https://www.runtastic.com/blog/es/movimiento-run-for-the-oceans/">
+              <div class="thumbnail">
+                <img src="./img/post-2.jpeg" alt="Post 2 image">
+              </div>
+              <h2 class="post-title">¿Jogging o plogging?</h2>
+              <h5 class="author">Maïlys Dussert | 19/5/2021</h5>
+              <p>El plogging (recoger basura mientras haces jogging) es una buena forma de hacer ejercicio y aportar algo positivo a tu comunidad.</p>
+              </a>
+          </div>
+          <div class="post">
+            <a href="https://www.runtastic.com/blog/es/movimiento-run-for-the-oceans/">
+              <div class="thumbnail">
+                <img src="./img/post-3.jpeg" alt="Post 3 image">
+              </div>
+              <h2 class="post-title">Streak Running: Los beneficios de correr todos los días</h2>
+              <h5 class="author">Abe Ankers | 18/5/2021</h5>
+              <p>¿Sabes por qué es bueno correr todos los días? Así es cómo funciona el streak running y cómo mantener tu racha.</p>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
+    
     <footer>
       <div class="row">
         <nav class="menu-footer">

@@ -44,19 +44,7 @@ header {
     }
   }
   .login {
-    background: $black;
     font-size: .8rem;
-    color: $white;
-    font-weight: 500;
-    padding: .75rem;
-    border: 2px solid $black;
-    transition: background .75s ease;
-    text-transform: uppercase;
-    -webkit-font-smoothing: antialiased;
-    &:hover {
-      color: $black;
-      background: transparent;
-    }
   }
   input + label {
     position: fixed;

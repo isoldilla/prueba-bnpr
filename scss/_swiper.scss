@@ -1,10 +1,14 @@
 #swiper-run {
+  box-shadow: 0px 9px 37px -18px rgba(130,117,130,1);
   &.swiper-container {
     .swiper-wrapper {
       height: auto;
       .swiper-slide { 
         height: 60vh;
         background: $white;
+        &:hover {
+          cursor: -webkit-grab;
+        }
         img {
           position: absolute;
           z-index: -1;
@@ -44,19 +48,7 @@
         }
       }
     }
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: $black;
-      &:after {
-        font-size: 1rem;
-      }
-    }
-    .swiper-button-next {
-      right: 0;
-    }
-    .swiper-button-prev {
-      left: 0;
-    }
+    
   
     @media screen and (min-width: $breakpoint-md) {
       .swiper-wrapper {
@@ -80,12 +72,6 @@
         &:after {
           font-size: 1.5rem;
         }
-      }
-      .swiper-button-next {
-        right: 20px;
-      }
-      .swiper-button-prev {
-        left: 20px;
       }
     }
     @media screen and (min-width: $breakpoint-lg) {
@@ -117,6 +103,83 @@
           }
         }
       }
+    }
+  }
+}
+
+#swiper-testimonials {
+  // padding: 2rem 0;
+  &.swiper-container {
+    .swiper-wrapper {
+      height: auto;
+      .swiper-slide {
+        .testimonial {
+          margin: 2rem;
+          text-align: center;
+          .faces {
+            margin: 2rem 0;
+            img {
+              width: 100px;
+              margin: 0 1rem;
+            }
+          }
+          p {
+            margin: 1rem;
+            padding-bottom: 3rem
+          }
+        }
+      }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: $black;
+      &:after {
+        font-size: 1rem;
+      }
+    }
+    .swiper-button-next {
+      right: 0;
+    }
+    .swiper-button-prev {
+      left: 0;
+    }
+
+    @media screen and (min-width: $breakpoint-md) {
+      padding: 3rem 0;
+      .swiper-wrapper {
+        height: auto;
+        .swiper-slide {
+          // height: 45vh;
+          .testimonial {
+            width: 70%;
+            margin: 0 auto;
+            .faces {
+              img {
+                width: 150px;
+              }
+            }
+          }
+          &:hover {
+            cursor: -webkit-grab;
+          }
+        }
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+          &:after {
+            font-size: 1.5rem;
+          }
+      }
+      .swiper-button-next {
+        right: 2rem;
+      }
+      .swiper-button-prev {
+        left: 2rem;
+      }
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      padding: 6rem 0;
+      
     }
   }
 }

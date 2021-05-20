@@ -1,0 +1,59 @@
+.posts {
+  > h2 {
+    text-align: center;
+  }
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 60px;
+   
+    .post {
+      a {
+        color: $black;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        .thumbnail {
+          position: relative;
+          width: 100%;
+          padding-top: 100%;
+            img {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              object-fit: cover;
+            }
+        }
+        .post-title {
+          text-decoration: none;
+          transition: all .5s ease;
+          font-size: 1.5rem;
+          flex: 1;
+        }
+        .author {
+          margin: 0;
+          flex: 1;
+        }
+        &:hover {
+          h2 {
+            text-decoration: underline
+          }
+        }
+      }
+      
+    }
+  }
+  
+  @media screen and (min-width: $breakpoint-md) {
+    .posts-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media screen and (min-width: $breakpoint-lg) {
+    .posts-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-gap: 100px;
+    } 
+  }
+}

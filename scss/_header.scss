@@ -4,13 +4,19 @@ header {
   align-items: center;
   background: $white;
   padding: 1rem 2rem;
-  position: inherit;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 2;
   margin: 0 auto;
+  &.blog {
+    background: $turquoise;
+  }
   .logo {
     z-index: 4;
     position: fixed;
     top: 40px;
-    left: 20px;
+    // left: 20px;
     img {
       width: 150px;
     }
@@ -146,7 +152,7 @@ header {
   @media screen and (min-width: $breakpoint-md) {
     // max-width: 750px;
     .logo {
-      position: inherit;
+      position: unset;
     }
     nav {
       &.header-mobile {
@@ -158,6 +164,7 @@ header {
         .menu {
           display: flex;
           list-style-type: none;
+          padding-left: .5rem;
           li {
             margin: 0 1rem;
             font-size: .8rem;
@@ -170,10 +177,10 @@ header {
         }
         &.blog {
           flex: 1;
-          .menu {
-            padding: 0;
+          // .menu {
+          //   padding: 0;
           
-          }
+          // }
         }
       }
     }
@@ -191,7 +198,8 @@ header {
       &.header-desktop {
       
         .menu {
-          
+          padding-left: 2rem;
+
           li {
             margin: 0 2rem;
             font-size: 1rem;

@@ -102,65 +102,286 @@
 }
 
 // Post page
+body.post {
+  main {
+    padding-top: 5rem;
 
-.hero {
-  position: relative;
-  img {
-    width: 100%;
   }
-}
-.post-info {
-  display: flex;
-  padding: 0;
-  justify-content: space-between;
-  .author {
-    margin: 0;
+  .hero {
+    position: relative;
+    img {
+      width: 100%;
+    }
   }
-  .share {
+  .post-info {
     display: flex;
-    list-style: none;
-    margin: 0;
-    li {
-      margin-left: 1rem;
-      .fa {
-        &:before {
-          color: $black;
-          transition: all .5s ease;
-        }
-        &:hover {
+    padding: 0;
+    justify-content: space-between;
+    .author {
+      margin: 0;
+    }
+    .share {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      li {
+        margin-left: 1rem;
+        .fa {
           &:before {
-            color: $turquoise;
+            color: $black;
+            transition: all .5s ease;
+          }
+          &:hover {
+            &:before {
+              color: $turquoise;
+            }
+          }
+        }
+      }
+      
+    }
+  }
+  .tags-badges {
+    padding: 0;
+    
+    ul {
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      list-style-type: none;
+      li {
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        background: $turquoise;
+        padding: .25rem .75rem;
+        border-radius: 50px;
+        color: $black;
+      }
+    }
+    
+          
+  }
+  .post-content {
+    padding: 0;
+    p {
+      a {
+        color: $turquoise;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      
+    }
+    .info {
+      background: $turquoise;
+      padding: 1rem;
+      margin: 2rem 0;
+      h5 {
+        margin: 0;
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+        i {
+          margin-right: 1rem;
+        }
+      }
+    }
+    h3 {
+      margin-top: 2rem;
+    }
+  }
+
+  .rate-and-share {
+    .rate,
+    .share {
+      text-align: center;
+      h2 {
+        margin-bottom: 3rem;
+      }
+      i {
+        margin: 0 1rem;
+      }
+    }
+    .rate {
+      margin-bottom: 2rem;
+    }
+  }
+  .author {
+    margin: 3rem 2rem;
+    text-align: center;
+    border-top: 2px solid $black;
+    padding-top: 3rem;
+    p {
+      margin: 2rem 0;
+    }
+    a {
+      display: block;
+    }
+  }
+  .comments {
+    .comment {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin: 3rem 0;
+      width: 100%;
+      font-size: .8rem;
+      img {
+        width: 50px;
+        height: 50px;
+      }
+      .textarea {
+        flex: 1;
+        margin-left: 1rem;
+        textarea {
+          border: 2px solid $black;
+          padding: 1rem;
+          outline: none;
+          width: 100%;
+          font-family: "NB Akademie Std"
+        }
+        input {
+          width: 100%;
+          display: block;
+          margin-left: auto;
+          margin-top: 1.5rem;
+        }
+      }
+      
+  
+    }
+   
+    .old-comments {
+      .comment {
+        display: flex;
+        align-items: flex-start;
+        padding-bottom: 1.5rem;
+        margin: 1rem 0;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+        .message {
+          margin-left: 1rem;
+          .user,
+          .date {
+            display: inline-block;
+            font-size: 1.25rem;
+            margin: 0;
+          }
+          .user {
+            font-weight: $font-weight-medium;
+            padding-right: 1rem;
+          }
+          .date {
+            font-weight: $font-weight-light;
+            padding-top: .5rem;
+            font-size: 1rem;
+          }
+          .interactions {
+            a {
+              position: relative;
+              color: $turquoise;
+              transition: all .5s ease;
+              &:hover {
+                color: $black;
+              }
+              &:first-child {
+                margin-right: 1rem;
+              }
+            }
+          }
+        }
+        &.answer {
+          img {
+            width: 30px;
+            height: 30px;
+          }
+          .message {
+            .user {
+              font-size: 1rem;
+            }
+            .date {
+              font-size: .8rem;
+            }
+            p {
+              font-size: 14px;
+            }
           }
         }
       }
     }
-    
   }
-}
-.tags-badges {
-  padding: 0;
+  @media screen and (min-width: $breakpoint-md) {
+    .rate-and-share {
+      display: flex;
+      justify-content: space-around;
+    }
+    .comments {
+      .comment {
+        margin-top: 3rem;
+        img {
+          width: initial;
+          height: initial;
+        }
+        .textarea {
+          flex: 1;
+          margin-left: 2rem;
+       
+          input {
+            width: 300px;
+           
+          }
+        }
+        
+      }
+    
+      .old-comments {
+        padding: 2rem;
+        .comment {
+          img {
+            width: 75px;
+            height: 75px;
+          }
+          .message {
+            margin-left: 2rem;
   
-  ul {
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    li {
-      margin-right: 1rem;
-      margin-bottom: 1rem;
-      background: $turquoise;
-      padding: .25rem .75rem;
-      border-radius: 50px;
-      color: $black;
+            .date {
+              padding-left: 1rem;
+              padding-top: 0;
+              border-left: 1px solid $black;
+            }
+          }
+          &.answer {
+            margin-left: 1.5rem;
+            img {
+              width: 50px;
+              height: 50px;
+            }
+          }
+        }
+      }
     }
   }
-  
-        
-}
-
-@media screen and (min-width: $breakpoint-lg) {
-  .post-info,
-  .tags-badges {
-    margin-top: 3rem;
+  @media screen and (min-width: $breakpoint-lg) {
+    .post-info,
+    .tags-badges {
+      margin-top: 3rem;
+    }
+    .post-content {
+      img {
+        margin: 2rem 0;
+      }
+      .info {
+        padding: 2rem;
+      }
+    }
+    .author {
+      margin: 0 auto;
+      width: 70%;
+     
+    }
   }
 }

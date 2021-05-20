@@ -1,6 +1,6 @@
 body {
   font-family: "NB Akademie Std";
-  background: #EDEDED;
+  background: #FFF;
   overflow-x: hidden;
   margin: unset;
 }
@@ -69,10 +69,23 @@ body.blog .tags ul li:hover {
 body.blog .tags ul li:hover a {
   color: turquoise;
 }
+body.blog .posts .posts-grid {
+  padding-bottom: 3rem;
+}
+body.blog .posts a.button {
+  display: block;
+  margin: 0 auto;
+}
 @media screen and (min-width: 768px) {
   body.blog .page-title {
     margin: 6rem 2rem 4rem;
     font-size: 2.5rem;
+  }
+  body.blog .posts .posts-grid {
+    padding-bottom: 5rem;
+  }
+  body.blog .posts a.button {
+    width: 50%;
   }
 }
 @media screen and (min-width: 1366px) {
@@ -127,6 +140,15 @@ body.blog .tags ul li:hover a {
   color: #000;
   background: #FFF;
 }
+.button.turquoise {
+  background: #00c1c1;
+  color: #FFF;
+  border: 2px solid #00c1c1;
+}
+.button.turquoise:hover {
+  color: #00c1c1;
+  background: transparent;
+}
 .button:focus {
   outline: none;
 }
@@ -162,6 +184,10 @@ body.blog .tags ul li:hover a {
   opacity: 1;
   bottom: -5px;
 }
+.cta.premium .title h3, .cta.bg .title h3 {
+  text-align: center;
+  text-transform: uppercase;
+}
 .cta.premium {
   padding: 2rem 0;
   background: #242424;
@@ -180,18 +206,21 @@ body.blog .tags ul li:hover a {
 .cta.premium .info a {
   display: block;
 }
-.cta.careers .info {
+.cta.bg .info {
   padding: 2rem 0;
   position: relative;
 }
-.cta.careers .info .title {
+.cta.bg .info .title {
   margin: 0 2rem;
   z-index: 1;
 }
-.cta.careers .info .title a {
+.cta.bg .info .title h3 {
+  margin: 0 0 2rem;
+}
+.cta.bg .info .title a {
   display: block;
 }
-.cta.careers .info .img {
+.cta.bg .info .img {
   overflow: hidden;
   background: white;
   position: absolute;
@@ -200,7 +229,7 @@ body.blog .tags ul li:hover a {
   width: 100%;
   z-index: -1;
 }
-.cta.careers .info .img img {
+.cta.bg .info .img img {
   width: 100%;
   height: 100%;
   opacity: 0.5;
@@ -216,7 +245,7 @@ body.blog .tags ul li:hover a {
   .cta.premium {
     padding: 3rem 0;
   }
-  .cta.careers .info {
+  .cta.bg .info {
     padding: 4rem 0;
   }
 }
@@ -238,26 +267,26 @@ body.blog .tags ul li:hover a {
     font-size: 20px;
     margin: 2rem 4rem;
   }
-  .cta.careers {
+  .cta.bg {
     padding-top: 0;
   }
-  .cta.careers .info .title {
+  .cta.bg .info .title {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
     display: flex;
     justify-content: space-between;
   }
-  .cta.careers .info .title h3 {
+  .cta.bg .info .title h3 {
     margin: 0 4rem 0 0;
     font-size: 2.5rem;
     text-transform: uppercase;
   }
-  .cta.careers .info .title a {
+  .cta.bg .info .title a {
     display: inline-block;
     flex: 1;
   }
-  .cta.careers .info .img {
+  .cta.bg .info .img {
     margin: 0;
   }
 }
@@ -268,7 +297,7 @@ body.blog .tags ul li:hover a {
   .cta.premium .info p {
     font-size: 26px;
   }
-  .cta.careers .info .title {
+  .cta.bg .info .title {
     max-width: 1400px;
   }
 }
@@ -958,36 +987,69 @@ p {
   grid-gap: 60px;
   margin-top: 2rem;
 }
-.posts .posts-grid .post a {
+.posts .posts-grid .post > a {
   color: #000;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
-.posts .posts-grid .post a .thumbnail {
+.posts .posts-grid .post > a .thumbnail {
   position: relative;
   width: 100%;
   padding-top: 70%;
 }
-.posts .posts-grid .post a .thumbnail img {
+.posts .posts-grid .post > a .thumbnail img {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   object-fit: cover;
 }
-.posts .posts-grid .post a .post-title {
+.posts .posts-grid .post > a .post-title {
   text-decoration: none;
   transition: all 0.5s ease;
   font-size: 1.5rem;
   flex: 1;
 }
-.posts .posts-grid .post a .author {
+.posts .posts-grid .post > a .author {
   margin: 0;
   flex: 1;
 }
-.posts .posts-grid .post a:hover h2 {
+.posts .posts-grid .post > a:hover h2 {
   text-decoration: underline;
+}
+.posts .posts-grid .post.blog {
+  padding-bottom: 2rem;
+}
+.posts .posts-grid .post.blog .post-title,
+.posts .posts-grid .post.blog .author,
+.posts .posts-grid .post.blog .rate {
+  text-align: center;
+}
+.posts .posts-grid .post.blog .rate .fa-star:last-child:before {
+  color: transparent;
+  -webkit-text-stroke: 1px #000;
+}
+.posts .posts-grid .post.blog .read-more {
+  height: auto;
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+}
+.posts .posts-grid .post.blog .read-more:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.posts .posts-grid .post.blog .read-more:hover:after {
+  opacity: 1;
+  bottom: -5px;
 }
 @media screen and (min-width: 768px) {
   .posts .posts-grid {
@@ -1003,6 +1065,8 @@ p {
 
 .social {
   text-align: center;
+  padding: 4rem 2;
+  margin: 0 2rem;
 }
 .social .social-icons {
   list-style: none;
@@ -1014,6 +1078,9 @@ p {
   color: #000;
 }
 @media screen and (min-width: 768px) {
+  .social {
+    padding: 6rem 0;
+  }
   .social .social-icons {
     justify-content: center;
   }

@@ -39,13 +39,29 @@ body.blog {
       }
     }
   }
-
+  .posts {
+    .posts-grid {
+      padding-bottom: 3rem;
+    }
+    a.button {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  
   @media screen and (min-width: $breakpoint-md) {
     .page-title {
       margin: 6rem 2rem 4rem;
       font-size: 2.5rem;
     }
-
+    .posts {
+      .posts-grid {
+        padding-bottom: 5rem;
+      }
+      a.button {
+        width: 50%;
+      }
+    }
    
   }
   @media screen and (min-width: $breakpoint-lg) {

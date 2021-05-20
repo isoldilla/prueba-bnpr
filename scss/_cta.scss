@@ -35,10 +35,11 @@
   }
  
   &.premium,
-  &.careers {
+  &.bg {
     .title {
       h3 {
-        // margin: 0 0 2rem;
+        text-align: center;
+        text-transform: uppercase;
       }
     }
   }
@@ -64,7 +65,7 @@
     }
   }
 
-  &.careers {
+  &.bg {
     .info {
       padding: 2rem 0;
       position: relative;
@@ -72,6 +73,10 @@
     
         margin: 0 2rem;
         z-index: 1;
+        h3 {
+        margin: 0 0 2rem;
+
+        }
         a {
           display: block;
         }
@@ -103,7 +108,7 @@
       &.premium {
         padding: 3rem 0;
       }
-      &.careers {
+      &.bg {
         .info {
           padding: 4rem 0;
         }
@@ -134,7 +139,7 @@
       }
     }
 
-    &.careers {
+    &.bg {
       padding-top: 0;
       .info {
         .title {
@@ -170,7 +175,7 @@
       }
     }
 
-    &.careers {
+    &.bg{
       .info {
         .title {
           max-width: 1400px;

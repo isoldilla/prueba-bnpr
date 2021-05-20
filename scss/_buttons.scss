@@ -37,6 +37,15 @@
       background: $white;
     }
   }
+  &.turquoise {
+    background: $turquoise;
+    color: $white;
+    border: 2px solid $turquoise;
+    &:hover {
+      color: $turquoise;
+      background: transparent;
+    }
+  }
   
   &:focus {
     outline: none;

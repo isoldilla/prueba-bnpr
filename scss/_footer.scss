@@ -1,6 +1,6 @@
 footer {
-  background: $darkgray;
-  padding: 2rem; 
+  background: $white;
+  padding: 1rem; 
   a {
     color: $black;
   }
@@ -122,6 +122,7 @@ footer {
   }
   @media screen and (min-width: $breakpoint-sm) {
     .menu-footer {
+      padding: 2rem;
       margin-right: 2rem;
       ul {
         &.mobile {
@@ -139,6 +140,7 @@ footer {
     }
   }
   @media screen and (min-width: $breakpoint-md) {
+    padding: 3rem 2rem;
     .row {
       &:first-child {
         flex-direction: row;

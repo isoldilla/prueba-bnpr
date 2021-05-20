@@ -6,19 +6,28 @@ body {
   overflow-x: hidden;
   margin: unset;
   main {
-    margin: 0 auto;
-    max-width: 90vw;
     overflow-x: hidden;
+    margin: 0 auto;
+    section {
+      margin: 2rem;
+    }
     @media screen and (min-width: $breakpoint-md) {
-      max-width: 750px;
+      
     }
 
     @media screen and (min-width: $breakpoint-lg) {
       max-width: 1200px;
+      section {
+        margin: 0;
+      } 
     }
 
     @media screen and (min-width: $breakpoint-xl) {
       max-width: 1400px;
     }
+  }
+
+  &.home {
+    background-image: linear-gradient(186deg, rgba(255,255,255,0.6797093837535014) 43%, rgba(169,123,223,0.44441526610644255) 56%, rgba(0,193,193,1) 90%);
   }
 }

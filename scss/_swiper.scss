@@ -4,7 +4,7 @@
       height: auto;
       .swiper-slide { 
         height: 60vh;
-  
+        background: $white;
         img {
           position: absolute;
           z-index: -1;
@@ -62,17 +62,15 @@
       .swiper-wrapper {
         .swiper-slide { 
           height: 70vh;
-          .text {
-            top: 5rem;
-            left: 6rem;
-            width: 50%;
-            transform: none;        
+          .text {   
             h3 {
               font-size: 4rem;
+              max-width: 80%;
             }
             p {
               font-size: 1.5rem;  
               line-height: 1.4;
+              max-width: 80%;
             }
           }
         }
@@ -95,7 +93,12 @@
         .swiper-slide { 
         
           .text {
-              
+            position: relative;
+            left: unset;
+            transform: translate(-0, -50%);
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
             h3 {
               font-size: 5rem;
             }
@@ -104,6 +107,16 @@
         }
       }
     }
-    
+    @media screen and (min-width: $breakpoint-xl) {
+      .swiper-wrapper {
+        .swiper-slide { 
+        
+          .text {          
+            max-width: 1400px;
+            
+          }
+        }
+      }
+    }
   }
 }

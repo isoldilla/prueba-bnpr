@@ -1,0 +1,55 @@
+section {
+  &.app {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-gap: 60px;
+    padding: 2rem 0;
+    .info {
+      > img {
+        width: 75px;
+      }
+      .apps {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: space-between;
+        a {
+          width: calc(50% - .5rem);
+        }
+      }
+    }
+    .images {
+      img {
+        width: 100%;
+      }
+    }
+    @media screen and (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      padding: 3rem 0;
+      .images {
+        &.training {
+          text-align: right;
+        }
+        &.running {
+          text-align: left;
+        }
+      }
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      padding: 6rem 0;
+      .info {
+        .apps {
+          justify-content: flex-start;
+          a {
+            max-width: 200px;
+            margin-right: 1rem;
+          }
+        }
+      }
+      .images {
+        img {
+          width: 75%;
+        }
+      }
+    }
+  }
+}

@@ -2,7 +2,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  background: $white;
+  padding: 1rem 2rem;
   position: inherit;
   margin: 0 auto;
   .logo {
@@ -143,7 +144,7 @@ header {
   } 
 
   @media screen and (min-width: $breakpoint-md) {
-    max-width: 750px;
+    // max-width: 750px;
     .logo {
       position: inherit;
     }
@@ -175,7 +176,7 @@ header {
     }
   }
   @media screen and (min-width: $breakpoint-lg) {
-    max-width: 1200px;
+    // max-width: 1200px;
     nav {
       &.header-mobile {
         display: none;
@@ -197,6 +198,6 @@ header {
     }
   }
   @media screen and (min-width: $breakpoint-xl) {
-    max-width: 1400px;
+    // max-width: 1400px;
   }
 }

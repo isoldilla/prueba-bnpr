@@ -1,67 +1,308 @@
 <html lang="es">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      <title>Home</title> 
-      <link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8">
-      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Blog</title> 
+    <link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
-  <body>
+  <body class="blog">
+    <header>
+      <a class="logo" href="home.html"><img src="./img/logo-runtastic.svg" alt="Logo Runtastic"></a>
+      <nav class="header-desktop blog">
+        <ul class="menu">
+          <li><a href="#">Cardio</a></li>
+          <li><a href="#">Fuerza</a></li>
+          <li><a href="#">Nutrición</a></li>
+          <li><a href="#">Hábitos</a></li>
+          <li><a href="#">Historias</a></li>
+          <li><a href="#">Noticias</a></li>
+        </ul>
+      </nav>
+      <a href="#"><i class="fa fa-shopping-cart"></i>      
+      </a>
+      <a href="#"><i class="fa fa-search"></i>
+      </a>
+      <input id="burger" type="checkbox">
+      <label for="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+      </label>
+      <nav class="header-mobile">
+        <ul class="menu">
+          <li><a href="#">Cardio</a></li>
+          <li><a href="#">Fuerza</a></li>
+          <li><a href="#">Nutrición</a></li>
+          <li><a href="#">Hábitos</a></li>
+          <li><a href="#">Historias de éxito</a></li>
+          <li><a href="#">Noticias</a></li>
+        </ul>
+      </nav>
+    </header>
+    
     <main>
-      <header>
-        <a class="logo" href="home.html"><img src="./img/logo-runtastic.svg" alt="Logo Runtastic"></a>
-        <nav class="header-desktop">
-          <ul class="menu">
-            <li><a href="blog.html">Blog</a></li>
-            <li>Empleo</li>
-            <li>Ayuda</li>
-            <li>Empresas colaboradoras</li>
-          </ul>
-        </nav>
-        <a class="login" href="#">Iniciar sesión</a>
-        <input id="burger" type="checkbox" />
-        <label for="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-        <nav class="header-mobile">
-          <ul class="menu">
-            <li><a href="blog.html">Blog</a></li>
-            <li>Empleo</li>
-            <li>Ayuda</li>
-            <li>Empresas colaboradoras</li>
-          </ul>
-        </nav>
-      </header>
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <h3>Sello FSC</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus fuga, voluptatem necessitatibus ut distinctio nisi nulla accusamus similique minus placeat maiores aut id aliquam quam porro nihil asperiores totam in.</p>
+      <h1 class="page-title">Consejos de running, fitness y nutrición: el equilibrio para una vida saludable y activa</h1>
+      <div id="swiper-blog" class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events swiper-container-android">
+      <div class="swiper-wrapper" aria-live="polite" style="transform: translate3d(-4200px, 0px, 0px); transition-duration: 0ms;">
+        <div class="swiper-slide swiper-slide-duplicate-next" style="width: 1400px;">
+          <img src="./img/blog-slide-1.jpeg" alt="Blog Slide 1">
+          <div class="text">
+            <h3>Correr por la mañana, por la tarde o a la noche, ¿qué es mejor?</h3>
+            <h5 class="author">adidas Runtastic Team | 19/5/2021</h5>
+            <div class="rate">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>       
+        </div>
+        <div class="swiper-slide swiper-slide-active"style="width: 1400px;">
+          <img src="./img/blog-slide-2.jpeg" alt="Blog Slide 2">
+          <div class="text">
+            <h3>5 errores comunes al correr: mejora tu técnica de carrera</h3>
+            <h5 class="author">Herwig Natmessnig | 20.05.2021</h5>
+            <div class="rate">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>   
+        </div> 
+        <div class="swiper-slide swiper-slide-prev" style="width: 1400px;">
+          <img src="./img/blog-slide-3.jpeg" alt="Blog Slide 3">
+          <div class="text">
+            <h3>Run for the oceans: la lucha contra los residuos plásticos</h3>
+            <h5 class="author">adidas Runtastic Team | 19.05.2021</h5>  
+            <div class="rate">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>        
+          </div>   
+        </div>      
+      </div>
+      <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-21de6cf9ef69cc1b">  
+      </div>
+      <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-21de6cf9ef69cc1b">
+      </div>
+      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+    </div>
+  
+      <section class="tags">
+        <h2>Tags</h2>
+        <ul>
+          <li><a href="">Fitness</a></li>
+          <li><a href="">Pérdida de peso</a></li>
+          <li><a href="">Equipación y moda</a></li>
+          <li><a href="">Consejos de nutrición</a></li>
+          <li><a href="">Infográficos</a></li>
+          <li><a href="">Estilo de vida</a></li>
+          <li><a href="">Novedades</a></li>
+          <li><a href="">Recetas</a></li>
+          <li><a href="">Sueños y descanso</a></li>
+          <li><a href="">Entrenamiento</a></li>
+          <li><a href="">Motivación e inspiración</a></li>
+          <li><a href="">Running</a></li>
+          <li><a href="">Adidas Running</a></li>
+          <li><a href="">Recuperación</a></li>
+          <li><a href="">Adidas Training</a></li>
+          <li><a href="">Planes de entrenamiento</a></li>
+          <li><a href="">Workout</a></li>
+        </ul>
+      </section>
+      <section class="posts">
+        <h2>Artículos de interés</h2>
+        <div class="posts-grid">
+          <div class="post">
+            <a href="https://www.runtastic.com/blog/es/movimiento-run-for-the-oceans/">
+              <div class="thumbnail">
+                <img src="./img/post-1.jpeg" alt="Post 1 image">
+              </div>
+              <h2 class="post-title">Run for the Oceans: la lucha contra los residuos plásticos</h2>
+              <h5 class="author">adidas Runtastic Team | 19/5/2021</h5>
+              <p>El plástico es un problema global. Únete a Run For The Oceans entre el 28 de mayo y el 8 de junio para denunciar la contaminación por plástico en el mar.</p>
+            </a>
           </div>
-          <div class="swiper-slide">
-            <h3>Sello PEFC</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus fuga, voluptatem necessitatibus ut distinctio nisi nulla accusamus similique minus placeat maiores aut id aliquam quam porro nihil asperiores totam in.</p>
+          <div class="post">
+            <a href="https://www.runtastic.com/blog/es/movimiento-run-for-the-oceans/">
+              <div class="thumbnail">
+                <img src="./img/post-2.jpeg" alt="Post 2 image">
+              </div>
+              <h2 class="post-title">¿Jogging o plogging?</h2>
+              <h5 class="author">Maïlys Dussert | 19/5/2021</h5>
+              <p>El plogging (recoger basura mientras haces jogging) es una buena forma de hacer ejercicio y aportar algo positivo a tu comunidad.</p>
+              </a>
           </div>
-          <div class="swiper-slide">
-            <h3>Sello Fair Trade</h3>
-            <!-- <img src="./img/carlos-herrera.png" alt="Fair Trade"> -->
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus fuga, voluptatem necessitatibus ut distinctio nisi nulla accusamus similique minus placeat maiores aut id aliquam quam porro nihil asperiores totam in.</p>
+          <div class="post">
+            <a href="https://www.runtastic.com/blog/es/movimiento-run-for-the-oceans/">
+              <div class="thumbnail">
+                <img src="./img/post-3.jpeg" alt="Post 3 image">
+              </div>
+              <h2 class="post-title">Streak Running: Los beneficios de correr todos los días</h2>
+              <h5 class="author">Abe Ankers | 18/5/2021</h5>
+              <p>¿Sabes por qué es bueno correr todos los días? Así es cómo funciona el streak running y cómo mantener tu racha.</p>
+            </a>
+          </div>
+          <div class="post">
+            <a href="https://www.runtastic.com/blog/es/como-evitar-el-plastico/">
+              <div class="thumbnail">
+                <img src="./img/post-4.jpeg" alt="Post 4 image">
+              </div>
+              <h2 class="post-title">7 formas de evitar la contaminación por plásticos en el mar</h2>
+              <h5 class="author">Tina Sturm-Ornezeder | 18/05/2021</h5>
+              <p>¿Sabías que la mayoría de las bolsas de plástico se usan una media de 12 minutos antes de tirarlas a la basura?</p>
+            </a>
+          </div>
+          <div class="post">
+            <a href="https://www.runtastic.com/blog/es/como-evitar-el-plastico/">
+              <div class="thumbnail">
+                <img src="./img/post-5.jpeg" alt="Post 5 image">
+              </div>
+              <h2 class="post-title">4 causas comunes del dolor de cabeza después de entrenar</h2>
+              <h5 class="author">Katrin Grabner | 23/03/2021</h5>
+              <p>Ese dolor punzante en las sienes, el malestar palpitante en la frente… la mayoría de personas ha experimentado la agonía de un dolor de cabeza, y hay muchas posibles causas.</p>
+            </a>
+          </div>
+          <div class="post">
+            <a href="https://www.runtastic.com/blog/es/como-evitar-el-plastico/">
+              <div class="thumbnail">
+                <img src="./img/post-6.jpeg" alt="Post 6 image">
+              </div>
+              <h2 class="post-title">Dormir la siesta: 7 beneficios de las siestas reparadoras</h2>
+              <h5 class="author">Tina Sturm-Ornezeder | 04/06/2021</h5>
+              <p>El tiempo es oro. Seguro que por eso los humanos son los únicos animales que intentan descansar de una sola tirada. Los que tengan mascotas, como perros y gatos, sabrán que ellos se echan varias siestas al día.
+              </p>
+            </a>
           </div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
+      </section>
+      <div class="cta">
+        <div class="info">
+          <h4>Sé nuestra próxima historia de superación</h4>
+          <p>¿Has hecho un cambio radical en tu vida? ¿Has perdido peso con éxito? ¿Has decidido llevar una vida más saludable y ponerte en forma? Cuéntanoslo todo para ser nuestra siguiente historia de superación.</p>
+          <a href="https://www.runtastic.com/blog/es/comparte-tus-logros/?utm_content=success-story-form&utm_source=runtastic&utm_medium=blog&utm_campaign=runtastic_landingpage">Enviar historia de superación</a>
+        </div>
       </div>
-      <div class="footer">
-      </div>
+      <section class="social">
+        <h2>Síguenos</h2>
+        <ul class="social-icons">
+          <li><a href="#" class="facebook"><i class="fa fa-facebook fa-lg"></i></a>  
+          </li>
+          <li><a href="#" class="instagram"><i class="fa fa-instagram fa-lg"></i></a>  
+          </li>
+          <li><a href="#" class="linkedin"><i class="fa fa-linkedin fa-lg"></i></a>  
+          </li>
+          <li><a href="#" class="youtube"><i class="fa fa-youtube fa-lg"></i></a>  
+          </li>
+        </ul>
+      </section>
     </main>
+    
+    <footer>
+      <div class="row">
+        <nav class="menu-footer">
+        
+          <ul class="mobile">
+            <li>
+              <label name="tab" for="tab1">Síguenos</label>
+              <input type="checkbox" checked="" id="tab1">
+              <span class="open-close-icon">
+                <i class="fa fa-chevron-down"></i> 
+              </span>
+              <div class="content">
+                <a href="https://www.facebook.com/adidasruntastic">Facebook</a>
+                <a href="https://www.instagram.com/adidasruntastic">Instagram</a>
+                <a href="https://www.youtube.com/adidasRuntastic">Youtube</a>
+                <a href="https://www.linkedin.com/company/runtastic-gmbh">Linkedin</a>
+              </div>
+              </li>
+              <li>
+                <label name="tab" for="tab2">Acerca de</label>
+                <input type="checkbox" id="tab2">
+                <span class="open-close-icon">
+                  <i class="fa fa-chevron-down"></i> 
+                </span>
+                <div class="content">
+                  <a href="https://www.runtastic.com/career">Empleo</a>
+                  <a href="https://www.runtastic.com/blog/en/category/tech/">Blog de tecnología</a>
+                  <a href="https://www.runtastic.com/partners/">Empresas colaboradoras</a>
+                  <a href="https://www.runtastic.com/mediacenter">Prensa y medios</a>
+                  <a href="https://help.runtastic.com/">Ayuda</a>
+                </div>
+              </li>
+              <li>
+                <label name="tab" for="tab3">Más</label>
+                <input type="checkbox" id="tab3">
+                <span class="open-close-icon">
+                  <i class="fa fa-chevron-down"></i> 
+                </span>
+                <div class="content">
+                  <a href="https://www.runtastic.com/terms">Términos y condiciones</a>
+                  <a href="https://www.runtastic.com/community-guidelines">Normas de conducta</a>
+                  <a href="https://www.runtastic.com/privacy-policy">Política de privacidad</a>
+                  <a href="https://www.runtastic.com/legal">Legal</a>
+                  <a href="#">Personal de seguimiento</a>
+                </div>
+              </li>
+          </ul>
+
+          <ul class="follow">
+            
+            <li><h3>Síguenos</h3></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="https://www.facebook.com/adidasruntastic">Facebook</a></li>
+            <li><a href="https://www.instagram.com/adidasruntastic">Instagram</a></li>
+            <li><a href="https://www.youtube.com/adidasRuntastic">Youtube</a></li>
+            <li><a href="https://www.linkedin.com/company/runtastic-gmbh">Linkedin</a></li>
+          </ul>
+          <ul class="about">
+            <li><h3>Acerca de</h3></li>
+            <li><a href="https://www.runtastic.com/career">Empleo</a></li>
+            <li><a href="https://www.runtastic.com/blog/en/category/tech/">Blog de tecnología</a></li>
+            <li><a href="https://www.runtastic.com/partners/">Empresas colaboradoras</a></li>
+            <li><a href="https://www.runtastic.com/mediacenter">Prensa y medios</a></li>
+            <li><a href="https://help.runtastic.com/">Ayuda</a></li>
+          </ul>
+          <ul class="more">
+            <li><h3>Más</h3></li>
+            <li><a href="https://www.runtastic.com/terms">Términos y condiciones</a></li>
+            <li><a href="https://www.runtastic.com/community-guidelines">Normas de conducta</a></li>
+            <li><a href="https://www.runtastic.com/privacy-policy">Política de privacidad</a></li>
+            <li><a href="https://www.runtastic.com/legal">Legal</a></li>
+            <li><a href="#">Personal de seguimiento</a></li>
+          </ul>
+        </nav>
+        <div class="logos">
+          <a href="https://shortyawards.com/"><img src="./img/award.svg" alt="Award Logo">
+          </a>
+          <a class="logo" href="home.html"><img src="./img/logo-runtastic.svg" alt="Logo Runtastic"></a>
+        </div>
+      </div>
+      <div class="row">
+        <form action="" class="language-picker">
+          <select name="language-select" id="language-select">
+            <option lang="en" value="english" selected="">Español</option>            
+            <option lang="de" value="deutsch">Deutsch</option>
+            <option lang="fr" value="francais">Français</option>
+            <option lang="it" value="italiano">Italiano</option>
+          </select>
+        </form>
+        <span>© Copyright runtastic GmbH 2021</span>
+      </div>
+    </footer>
+
     <script src="script.js" charset="utf-8"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   </body>
 </html>

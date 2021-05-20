@@ -12,6 +12,18 @@ document.addEventListener('DOMContentLoaded', () => {
       clickable: true,
     },
   });
+  const swiperBlog = new Swiper('#swiper-blog', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    autoplay: {
+      delay: 5000,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
   const swiperPeople = new Swiper('#swiper-testimonials', {
     // Optional parameters
     direction: 'horizontal',

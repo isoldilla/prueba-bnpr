@@ -46,6 +46,18 @@ header {
   .login {
     font-size: .8rem;
   }
+  
+  .fa-search {
+    margin-left: 1rem;
+  }
+  .fa-search,
+  .fa-shopping-cart {
+    color: $black;
+    transition: all .5s ease;
+    &:hover {
+      color: $turquoise;
+    }
+  }
   input + label {
     position: fixed;
     top: 40px;
@@ -114,7 +126,7 @@ header {
         margin: 3rem;
         transition-delay: 0s;
         > a {
-          display: block;
+          display: inline-block;
           color: $black;
         }
       }
@@ -154,6 +166,13 @@ header {
               text-decoration: none;
               color: black;
             }
+          }
+        }
+        &.blog {
+          flex: 1;
+          .menu {
+            padding: 0;
+          
           }
         }
       }

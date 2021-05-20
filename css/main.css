@@ -713,7 +713,6 @@ footer h3 {
 }
 @media screen and (min-width: 600px) {
   footer .menu-footer {
-    padding: 2rem;
     margin-right: 2rem;
   }
   footer .menu-footer ul.mobile {
@@ -829,6 +828,27 @@ p {
 @media screen and (min-width: 1366px) {
   .posts .posts-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.social {
+  text-align: center;
+}
+.social .social-icons {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0 0;
+}
+.social .social-icons li .fa:before {
+  color: #000;
+}
+@media screen and (min-width: 768px) {
+  .social .social-icons {
+    justify-content: center;
+  }
+  .social .social-icons li {
+    margin: 0 2rem;
   }
 }
 

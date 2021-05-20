@@ -1,0 +1,23 @@
+.social {
+  text-align: center;
+  .social-icons {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0 0;
+    li {
+      .fa {
+        &:before {
+          color: $black;
+        }
+      }
+    }
+
+    @media screen and (min-width: $breakpoint-md) {
+      justify-content: center;
+      li {
+        margin: 0 2rem;
+      }
+    }
+  }
+}

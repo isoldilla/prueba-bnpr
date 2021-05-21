@@ -11,6 +11,14 @@ header {
   margin: 0 auto;
   &.blog {
     background: $turquoise;
+    .fa-search,
+    .fa-shopping-cart {
+      color: $black;
+      transition: all .5s ease;
+      &:hover {
+        color: $white;
+      }
+    }
   }
   .logo {
     z-index: 4;

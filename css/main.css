@@ -311,6 +311,15 @@ header {
 header.blog {
   background: #00c1c1;
 }
+header.blog .fa-search,
+header.blog .fa-shopping-cart {
+  color: #000;
+  transition: all 0.5s ease;
+}
+header.blog .fa-search:hover,
+header.blog .fa-shopping-cart:hover {
+  color: #FFF;
+}
 header .logo {
   z-index: 4;
   position: fixed;
@@ -847,6 +856,7 @@ footer .menu-footer ul.mobile li {
 footer .menu-footer ul.mobile li label {
   font-weight: 500;
   text-transform: uppercase;
+  cursor: pointer;
 }
 footer .menu-footer ul.mobile li input {
   display: none;
@@ -1099,7 +1109,7 @@ body.post .post-info {
   padding: 0;
   justify-content: space-between;
 }
-body.post .post-info .author {
+body.post .post-info .date {
   margin: 0;
 }
 body.post .post-info .share {
@@ -1108,7 +1118,7 @@ body.post .post-info .share {
   margin: 0;
 }
 body.post .post-info .share li {
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
 body.post .post-info .share li .fa:before {
   color: #000;
@@ -1342,6 +1352,10 @@ body.post .tags-badges {
 }
 .social .social-icons li .fa:before {
   color: #000;
+  transition: all 0.5s ease;
+}
+.social .social-icons li .fa:hover:before {
+  color: #00c1c1;
 }
 @media screen and (min-width: 768px) {
   .social {

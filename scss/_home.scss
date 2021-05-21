@@ -21,6 +21,14 @@ section {
         width: 100%;
       }
     }
+    &.running {
+      .images {
+        order: 2;
+      }
+      .info {
+        order: 1;
+      }
+    }
     @media screen and (min-width: $breakpoint-md) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
       .images {
@@ -29,6 +37,14 @@ section {
         }
         &.running {
           text-align: left;
+        }
+      }
+      &.running {
+        .images {
+          order: unset;
+        }
+        .info {
+          order: unset;
         }
       }
     }

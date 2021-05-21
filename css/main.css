@@ -771,6 +771,12 @@ section.app .info .apps a {
 section.app .images img {
   width: 100%;
 }
+section.app.running .images {
+  order: 2;
+}
+section.app.running .info {
+  order: 1;
+}
 @media screen and (min-width: 768px) {
   section.app {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -780,6 +786,12 @@ section.app .images img {
   }
   section.app .images.running {
     text-align: left;
+  }
+  section.app.running .images {
+    order: unset;
+  }
+  section.app.running .info {
+    order: unset;
   }
 }
 @media screen and (min-width: 1366px) {
